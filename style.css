@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  background: #f0f0f0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px 260px 100px 100px 80px;
+  grid-template-areas:
+    "header menu  menu  menu"
+    "hero   hero  hero  hero"
+    "main   main  empty image"
+    "main   main  empty extra"
+    "banner banner banner banner";
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: header;
+  background: #131c2b;
+  color: #fff;
+}
+
+.menu {
+  grid-area: menu;
+  background: #eb445a;
+  color: #fff;
+}
+
+.hero {
+  grid-area: hero;
+  background: #4e84c4;
+  color: #fff;
+}
+
+.main {
+  grid-area: main;
+  background: #233347;
+  color: #fff;
+}
+
+.empty {
+  grid-area: empty;
+  background: #ffffff;
+}
+
+.image {
+  grid-area: image;
+  background: #bce2e5;
+  color: #111;
+}
+
+.extra {
+  grid-area: extra;
+  background: #48b382;
+  color: #111;
+}
+
+.banner {
+  grid-area: banner;
+  background: #f9cf67;
+  color: #111;
+}
+
+.grid-layout > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
